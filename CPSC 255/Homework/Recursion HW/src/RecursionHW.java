@@ -30,27 +30,22 @@ public class RecursionHW {
 	 */
 	public static boolean contains(ArrayList<String> words, String keyword, int left, int right) {
 		if (words.size() == 0) return false;
-		if (words.get(left).equals(keyword)) return true;
-		if (words.get(right-1).equals(keyword)) return true;
-		if (words.size() == 1) return false;
+		else if (keyword.equals(words.get(left))) return true;
+		else if (keyword.equals(words.get(right-1))) return true;
+		else if (right-left == 1) return keyword.equals(words.get(0));
 
-		ArrayList<String> a = new ArrayList<String>((words.size()+1)/2);
-		ArrayList<String> b = new ArrayList<String>(words.size()-a.size());
+		ArrayList<String> a = new ArrayList<String>();
+		ArrayList<String> b = new ArrayList<String>();
 
-		for (int i = 0; i < words.size(); i++)
-        {
-            if (i < a.size()) {
-                a.add(words.get(i));
-            }
-            else {
-                b.add(words.get(i));
-            }
-        }
-		
-		if (contains(a, keyword, left, a.size()-1)) return true;
-		else if (contains(b, keyword, 0, right)) return true;
+		for (int i=0; i<(words.size()+1)/2; i++) {
+			a.add(words.get(i));
+		}
+		for (int i=a.size(); i<words.size(); i++) {
+			b.add(words.get(i));
+		}
+		if (contains(a, keyword, left, a.size())) return true;
+		else if (contains(b, keyword, 0, right/2)) return true;
 		else return false;
-
 	}
 	/*
 	 * determines the maximum number in the list of ints between positions left (inclusive) and
@@ -60,7 +55,10 @@ public class RecursionHW {
 	 * If there is no data in the list, return -1000;  (Eventually, we will throw an Exception in this case.)
 	 */
 	public static int max(int[]  nums, int left, int right) {
-		return -90;// placeholder
+		if (nums.length == 0) return -1000;
+		if (right-left == 0) return -1000;
+		else if (max(nums, left+1, right) > nums[left]) return max(nums, left+1, right);
+		else return nums[left];
 	}
 	
 	/*
@@ -70,8 +68,13 @@ public class RecursionHW {
 	 * adds that result to the number in position  left, returning the total sum.
 	 * If there is no data in the list, return 0;  
 	 */
-	public static int sumOf(int[]  nums, int left, int right) {
-		return -90;// placeholder
+	public static int sumOf(int[] nums, int left, int right) {
+		if (nums.length == 0) return 0;
+		if (nums.length == 1) return nums[left];
+		if (right-left == 0) return 0;
+		int rtrSum = nums[left];
+		rtrSum += sumOf(nums, left+1, right);
+		return rtrSum;
 	}
 	
 	/*
@@ -82,6 +85,21 @@ public class RecursionHW {
 	 * If there is no data in the list, return 0;  
 	 */
 	public static int totalOf(int[]  nums, int left, int right) {
-		return -90;// placeholder
+		if (nums.length == 0) return 0;
+		if (nums.length == 1) return nums[left];
+
+		int[] a = new int[(nums.length + 1)/2];
+        int[] b = new int[nums.length - a.length];
+ 
+        for (int i = 0; i < nums.length; i++)
+        {
+            if (i < a.length) {
+                a[i] = nums[i];
+            }
+            else {
+                b[i - a.length] = nums[i];
+            }
+        }
+		return (totalOf(a, left, a.length-1) + totalOf(b, 0, right));
 	}
 }

@@ -32,7 +32,7 @@ public class RecursiveFunctionsInClass {
 	 */
 	public static boolean contains(ArrayList<String> words, String keyword, int left, int right) {
 		if (words.size() == 0) return false;
-		if (keyword.equals(words.get(left))) return true;
+ 		if (keyword.equals(words.get(left))) return true;
 		else if (right-left == 1) return false;
 		else return (contains(words, keyword, left+1, right));
 	}

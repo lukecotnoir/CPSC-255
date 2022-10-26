@@ -5,15 +5,15 @@ import javax.swing.JOptionPane;
 public class TestRecursionHW {
 
 	public static void main(String[] args) {
-		// testMaporsky();
-		// System.out.println("---------------------------------");
+		testMaporsky();
+		System.out.println("---------------------------------");
 		testContains();
-		// System.out.println("---------------------------------");
-		// testMax();
-		// System.out.println("---------------------------------");
-		// testSumOf();
-		// System.out.println("---------------------------------");
-		// testTotalOf();
+		System.out.println("---------------------------------");
+		testMax();
+		System.out.println("---------------------------------");
+		testSumOf();
+		System.out.println("---------------------------------");
+		testTotalOf();
 				
 
 			}

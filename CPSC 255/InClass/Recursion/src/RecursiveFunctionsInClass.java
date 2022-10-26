@@ -60,7 +60,7 @@ public class RecursiveFunctionsInClass {
                 b[i - a.length] = nums[i];
             }
         }
-
+		
 		if (max(a, left, a.length-1) > max(b, 0, right)) return max(a, left, a.length-1);
 		else return max(b, 0, right);
 		

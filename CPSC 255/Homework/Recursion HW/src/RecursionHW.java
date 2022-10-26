@@ -16,8 +16,10 @@ public class RecursionHW {
 	 *  Function uses recursion to do the calculation.
 	 * 
 	 */
-	public static int maporsky(int n) {
-		return -19;  // placeholder. 
+	public static int maporsky(int n) {		
+		if (n == 1) return 8;
+		if (n == 2) return 6;
+		else return (3*maporsky(n-2) + 2*maporsky(n-1));
 	}
 	
 	/*
@@ -27,9 +29,29 @@ public class RecursionHW {
 	 * the right half of the list (with a recursive call).
 	 */
 	public static boolean contains(ArrayList<String> words, String keyword, int left, int right) {
-		return false; // placeholder
-	}
+		if (words.size() == 0) return false;
+		if (words.get(left).equals(keyword)) return true;
+		if (words.get(right-1).equals(keyword)) return true;
+		if (words.size() == 1) return false;
 
+		ArrayList<String> a = new ArrayList<String>((words.size()+1)/2);
+		ArrayList<String> b = new ArrayList<String>(words.size()-a.size());
+
+		for (int i = 0; i < words.size(); i++)
+        {
+            if (i < a.size()) {
+                a.add(words.get(i));
+            }
+            else {
+                b.add(words.get(i));
+            }
+        }
+		
+		if (contains(a, keyword, left, a.size()-1)) return true;
+		else if (contains(b, keyword, 0, right)) return true;
+		else return false;
+
+	}
 	/*
 	 * determines the maximum number in the list of ints between positions left (inclusive) and
 	 * right(exclusive).

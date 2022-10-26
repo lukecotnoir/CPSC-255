@@ -5,15 +5,15 @@ import javax.swing.JOptionPane;
 public class TestRecursionHW {
 
 	public static void main(String[] args) {
-		testMaporsky();
-		System.out.println("---------------------------------");
+		// testMaporsky();
+		// System.out.println("---------------------------------");
 		testContains();
-		System.out.println("---------------------------------");
-		testMax();
-		System.out.println("---------------------------------");
-		testSumOf();
-		System.out.println("---------------------------------");
-		testTotalOf();
+		// System.out.println("---------------------------------");
+		// testMax();
+		// System.out.println("---------------------------------");
+		// testSumOf();
+		// System.out.println("---------------------------------");
+		// testTotalOf();
 				
 
 			}
@@ -112,7 +112,7 @@ public class TestRecursionHW {
 		
 	}
 
-	//---------------------------------------------------------
+	
 			private static void testMaporsky() {
 				String userinput = JOptionPane.showInputDialog("How many Maporsky numbers do you want? ");
 				int howmany = Integer.parseInt(userinput);
@@ -120,7 +120,7 @@ public class TestRecursionHW {
 					System.out.println(num + "'th Maporsky number is: " + RecursionHW.maporsky(num));  // awkward English
 				}	
 			}
-		//----------------------------------
+		
 
 			// pretty print an array
 			public static void printArrayOfInts(int[] nums)

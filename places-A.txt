@@ -1,0 +1,11 @@
+Newport News,Virginia
+Miami,Florida
+Richmond,Virginia
+Memphis,Tennessee
+Denver,Colorado
+San Francisco,California
+Seattle,Washington
+Boston,Massachusetts
+Montpelier,Vermont
+Madison,Wisconsin
+Des Moines,Iowa

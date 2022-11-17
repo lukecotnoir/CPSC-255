@@ -24,7 +24,7 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 	 */
 	public double totalHoldings() {
 		AccountNode temp = firstOne;
-		int total = 0;
+		float total = 0;
 		while(temp!=null) {
 			total += temp.getData().getBalance();
 			temp = temp.getNext();
@@ -37,7 +37,7 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 	 */
 	public double totalSavings() {
 		AccountNode temp = firstOne;
-		int total = 0;
+		float total = 0;
 		while(temp!=null) {
 			if (temp.getData() instanceof SavingsAccount) total += temp.getData().getBalance();
 			temp = temp.getNext();
@@ -54,7 +54,7 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 	{
 		AccountNode temp = firstOne;
 		int maxNumber = 0;
-		int maxBalance = 0;
+		float maxBalance = 0;
 		while(temp!=null) {
 			if (temp.getData() instanceof JointAccount && temp.getData().getBalance() > maxBalance) 
 				maxNumber += temp.getData().getNumber();
@@ -72,7 +72,7 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 		AccountNode prev = firstOne;
 		int total = 0;
 		while(temp!=null) {
-			if (temp.getData().getBalance() > prev.getData().getBalance()) total += temp.getData().getBalance();
+			if (temp.getData().getBalance() > prev.getData().getBalance()) total ++;
 			prev = temp;
 			temp = temp.getNext();
 		}
@@ -84,7 +84,8 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 	public void capitalizeAll() {
 		AccountNode temp = firstOne;
 		while(temp!=null) {
-			temp.getData().setOwner(temp.getData().getOwner().toUpperCase());
+			String name = temp.getData().getOwner();
+			temp.getData().setOwner(name.toUpperCase());
 			temp = temp.getNext();
 		}
 	}

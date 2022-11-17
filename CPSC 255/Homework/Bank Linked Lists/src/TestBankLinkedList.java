@@ -7,6 +7,7 @@ public class TestBankLinkedList {
 
 	public static void main(String[] args) {
 
+		
 		Scanner kbd = new Scanner(System.in);
 		int howmanyTestCases = 8;
 		for (int i = 1; i <= howmanyTestCases; i++)

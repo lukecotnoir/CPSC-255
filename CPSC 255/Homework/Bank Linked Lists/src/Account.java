@@ -66,6 +66,7 @@ public String getOwner() {
 	return myowner;
 }
 /**
+ *
  * @param myowner the myowner to set
  */
 public void setOwner(String myowner) {

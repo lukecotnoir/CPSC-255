@@ -1,0 +1,12 @@
+Red Donnelly,Anchor,32
+Sherry Forbes,Anchor,15
+Jim Pitman,Traffic,3
+LaShea Thompkins,Field Reporter,5
+Joe Carvecchio,Meteorology,12
+Joan Dornan,Consumer Advocate,4
+Terry Vitale,Meteorology,3
+Chris Glackin,Anchor,3
+Taylor Williams,Morning Show,8
+Andrea Jones,Traffic,1
+Linda Markle,Field Reporter,5
+Tommy Jolliffe,Field Reporter,2

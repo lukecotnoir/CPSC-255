@@ -1,0 +1,9 @@
+Mike Vitale,Morning Show,32
+Adam Byer,Anchor,21
+Trisha Tompkins,Weather,7
+Taylor Smith,Weather,10
+Pat Donnely,Traffic,4
+Tamara Boltz,Weather,5
+Amy Dornan,Field Reporter,7
+Mark McCutcheon,Consumer Advocate,4
+Sherry Davis,Anchor,17

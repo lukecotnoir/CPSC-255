@@ -16,7 +16,7 @@ public class TestBankLinkedList {
 			System.out.println("*********** TEST CASE # " + i + " ****************");
 			runFunctions(bank);
 			System.out.println("\n <----- Hit <Enter> to see the next test case ------->");
-			String hitreturn = kbd.nextLine();
+			kbd.nextLine();
 		}
 		System.out.println("End of test cases.");
 		kbd.close();
@@ -32,6 +32,7 @@ public class TestBankLinkedList {
 		System.out.println("Account number of joint account with highest balance:" + bank.largestJointAccount());
 		System.out.println("Number of accounts with higher balance than one before it: " + bank.howManyLargerThanOneBefore());
 		System.out.println("Capitalizing all owner names:");
+		bank.capitalizeAll();
 		System.out.println(bank);
 		Account accountToAdd = getRandomAccount();
 		System.out.println("ADDING " + accountToAdd + " to the end of the list...");

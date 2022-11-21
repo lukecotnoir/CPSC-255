@@ -84,8 +84,8 @@ public class FullerLinkedListOfAccounts extends BasicLinkedListOfAccounts {
 	public void capitalizeAll() {
 		AccountNode temp = firstOne;
 		while(temp!=null) {
-			String name = temp.getData().getOwner();
-			temp.getData().setOwner(name.toUpperCase());
+			String name = temp.getData().getOwner().toUpperCase();
+			temp.getData().setOwner(name);
 			temp = temp.getNext();
 		}
 	}

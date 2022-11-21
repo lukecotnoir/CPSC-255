@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+// Authors: Luke Cotnoir, Michael Van Horn
+// 11/21/22
+
 public class LinkedListOfStringWithMore extends BasicLinkedListOfStrings {
 
 	public LinkedListOfStringWithMore() {
@@ -30,7 +33,7 @@ public class LinkedListOfStringWithMore extends BasicLinkedListOfStrings {
 	public ArrayList<String> longStrings(){
 		ArrayList<String> longs = new ArrayList<String>();
 		NodeWithString temp = firstOne;
-		while(temp.getNextOne() != null){
+		while(temp != null){
 			if (temp.getData().length()>5) longs.add(temp.getData());
 			temp = temp.getNextOne();
 		}

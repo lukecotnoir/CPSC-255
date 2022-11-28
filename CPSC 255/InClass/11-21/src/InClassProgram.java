@@ -15,6 +15,7 @@ public class InClassProgram {
 			String hitreturn = kbd.nextLine();
 		}
 		System.out.println("End of test cases.");
+		kbd.close();
 
 	}
 	
